@@ -1,10 +1,19 @@
+{% extends "layout.html" %}
+{% block main %}
 <html>
   <head>
     <script src="static/js/index.js"></script>
     <link rel="stylesheet" href="static/css/styles.css">
+    <meta property="og:title" content="MusiqueWorld" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://PrestoHacks.nicholasxwang.repl.co" />
+    <meta property="og:image" content="/static/images/logo.png" />
+    <meta property="og:description" content="MusiqueWorld is the perfect app for people who make music, listen to music, and play music. It includes tools for composing music, playing music, and listening to music! " />
+    <meta name="theme-color" content="#11022C">
   </head>
   <body>
     <h1>MusiqueWorld</h1>
-    <p>MusiqueWorld is the perfect app for people who make music, listen to music, and play music. It includes 
+    <p>MusiqueWorld is the perfect app for people who make music, listen to music, and play music. It includes tools for composing music, playing music, and listening to music! 
   </body>
 </html>
+{% endblock %}
