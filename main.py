@@ -30,5 +30,19 @@ def signup():
 @app.route("/sendEmail",methods=["POST"])
 def send_email(head, body):
   return
+
+@app.route('/checkBetaKey', methods=['POST'])
+def check():
+  l = open("codes.txt").readlines()
+  for i in range(0,len(l)):
+    l[i] = l[i][0:5]
+  val = request.form.get('v')
+  print(val)
+  boolean = (val in l)
+  print(str(val) + " is: "+str(boolean))
+  if val not in l:
+    return 'f'
+    
+  return 't'
 #Run
 serve(app, host="0.0.0.0", port=8080)

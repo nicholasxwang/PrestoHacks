@@ -170,10 +170,6 @@ h1 {
 	 opacity: var(--success-opacity);
 	 color: var(--success);
 }
- html {
-	 box-sizing: border-box;
-	 -webkit-font-smoothing: antialiased;
-}
  * {
 	 box-sizing: inherit;
 }
@@ -185,8 +181,6 @@ h1 {
 	 display: flex;
 	 justify-content: center;
 	 align-items: center;
-	 font-family: 'Inter', Arial;
-	 background: #e1e6f9;
 }
  body .dribbble {
 	 position: fixed;
