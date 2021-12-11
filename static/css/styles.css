@@ -25,6 +25,17 @@ button{
 button:hover{
   background:linear-gradient(to right, #941b35,#5a2699);
 }
+
+input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+h1 {
+  margin: 10px;
+}
+
 /*Classes*/
 
 /*Id*/
