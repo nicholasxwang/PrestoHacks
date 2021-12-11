@@ -10,6 +10,37 @@
     <meta property="og:image" content="/static/images/Logo.png" />
     <meta property="og:description" content="MusiqueWorld is the perfect app for people who make music, listen to music, and play music. It includes tools for composing music, playing music, and listening to music! " />
     <meta name="theme-color" content="#11022C">
+    <script>
+    var userInput = document.getElementById('p');
+      var value = this.value;
+      userInput.onkeyup = function() {
+      var request =  $.ajax({
+        type: "POST",
+        url: "/checkBetaKey",
+        data: {
+          "v":document.getElementById("p").value
+        }
+      });
+      request.done(function(data){
+        
+        if (data === "f"){
+          document.getElementById("result").innerHTML = '<i  class="material-icons">error</i> \nInvalid Beta Key!'
+          document.getElementById("result").style.backgroundColor="rgba(235, 2, 2, 1)"
+        }else{
+          document.getElementById("result").innerHTML = '<i  class="material-icons">check_circle</i> Valid Beta Key!'
+          document.getElementById("result").style.backgroundColor="rgba(15, 158, 2, 1)"
+          
+          window.location.href = "/download?key="+document.getElementById("p").value
+        }
+
+      });
+      request.fail(function (jqXHR, textStatus) {
+        document.getElementById("result").innerHTML = (jqXHR+" • "+textStatus);
+
+    });
+    }
+      
+    </script>
   </head>
   <body>
     <div style="text-align:center;">
@@ -18,7 +49,7 @@
         <input type="email" placeholder="Email"><br>
         <input type="username" placeholder="Username"><br>
         <input type="password" placeholder="Password"><br>
-        <input type="beta" placeholder="Beta Code"><br>
+        <input type="beta" placeholder="Beta Code" id="p"><br>
         <button class="button">
           <span class="default">Submit</span>
           <span class="success">Submitted</span>

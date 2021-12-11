@@ -1,5 +1,5 @@
 #Imports
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from waitress import serve
 import os
 from flask_mail import Mail, Message
@@ -26,6 +26,9 @@ def login():
 def signup():
   return render_template('signup.html')
 
+@app.route('/search')
+def search():
+  return render_template("search.html")
 #Requests
 @app.route("/sendEmail",methods=["POST"])
 def send_email(head, body):
