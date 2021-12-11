@@ -27,5 +27,8 @@ def signup():
   return render_template('signup.html')
 
 #Requests
+@app.route("/sendEmail",methods=["POST"])
+def send_email(head, body):
+  return
 #Run
 serve(app, host="0.0.0.0", port=8080)
