@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block main %}
+<html>
+  <head>
+    <script src="https://prestohacks.nicholasxwang.repl.co/static/js/main.js"></script>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <meta property="og:title" content="MusiqueWorld" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://PrestoHacks.nicholasxwang.repl.co" />
+    <meta property="og:image" content="/static/images/Logo.png" />
+    <meta property="og:description" content="MusiqueWorld is the perfect app for people who make music, listen to music, and play music. It includes tools for composing music, playing music, and listening to music! " />
+    <meta name="theme-color" content="#11022C">
+  </head>
+  <body>
+    <div style="text-align:center;">
+      <div style="text-align:left;">
+        <div style="background-color:rgba(0,0,0,0.5);border-radius:10px;padding:20px;">
+        <select style="background:transparent;font-size:1.5em;color:white;border-style:none;">
+          <option>Pop</option>
+          <option>Classical</option>
+        </select>
+        <input style="background-color:rgba(0,0,0,0.5);font-size:1.5em;border-style:none;color:white;outline:none;" placeholder="Search Song Name">
+      </div>
+    </div>
+    
+  </body>
+</html>
+{% endblock %}
